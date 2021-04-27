@@ -1,0 +1,5 @@
+package excellence;
+
+class JankenJudge {
+
+}
