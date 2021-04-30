@@ -1,4 +1,4 @@
-package excellence;
+package extra;
 
 class JankenJudge {
 	private int p_win, n_win;
