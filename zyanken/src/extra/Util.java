@@ -16,7 +16,7 @@ public class Util {
 
 		} catch (NumberFormatException e) {
 			System.out.println("入力エラー\n再入力>");
-			inputNumber();
+			num = inputNumber();
 		} catch (Exception e) {
 			inputNumber();
 		}
