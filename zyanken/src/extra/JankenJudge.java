@@ -33,7 +33,6 @@ class JankenJudge {
 			System.out.println(p_win + "対" + n_win + "でコンピュータの勝ちです");
 
 		}
-		// TODO 自動生成されたメソッド・スタブ
 
 	}
 }
