@@ -13,5 +13,5 @@ class Constant {
 	public static final String INPUT_STRING = ">";
 	public static final String JANKENVS_STRING = "VS";
 	public static final String JANKENNUM_MESSAGE = "対戦回数を入力してください";
-	public static final String CP_NUMBER = "対戦人数を入力してください";
+	public static final String COM_NUMBER = "対戦人数を入力してください";
 }

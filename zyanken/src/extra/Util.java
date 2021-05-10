@@ -7,7 +7,7 @@ import java.util.Random;
 public class Util {
 	private String str;
 	private int num;
-	private int rand = 5, oldRand = 5;
+	private int rand = 5;//oldRand = 5
 	Random random = new Random();
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -27,19 +27,19 @@ public class Util {
 		return num;
 	}
 
-	public int numJudge(int zyankenNum) {
-		while (zyankenNum > 2 || zyankenNum < 0) {
+	public int numJudge(int jankenNum) {
+		while (jankenNum > 2 || jankenNum < 0) {
 			System.out.println(Constant.ERR_MESSAGE);
-			zyankenNum = inputNum();
+			jankenNum = inputNum();
 		}
-		return zyankenNum;
+		return jankenNum;
 	}
 
 	public int random() {
-		while (rand == oldRand) {
-			rand = random.nextInt(3);
-		}
-		oldRand = rand;
+		//		while (rand == oldRand) {
+		//		}
+		//		oldRand = rand;
+		rand = random.nextInt(3);
 		return rand;
 	}
 }

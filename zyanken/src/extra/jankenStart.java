@@ -10,15 +10,15 @@ public class jankenStart {
 	private int plNum, comNum, count, cpNum;
 
 	public void start() {
-		List<Player> cpList = new ArrayList<Player>();
-		System.out.println(Constant.CP_NUMBER);
+		List<Player> comList = new ArrayList<Player>();
+		System.out.println(Constant.COM_NUMBER);
 		cpNum = util.inputNum();
 		System.out.println(Constant.JANKENNUM_MESSAGE);
 		count = util.inputNum();
 
 		for (int i = 0; i < cpNum; i++) {
-			Player cp = new Player();
-			cpList.add(cp);
+			Player com = new Player();
+			comList.add(com);
 		}
 
 		for (int i = 0; i < count; i++) {
@@ -26,11 +26,18 @@ public class jankenStart {
 			System.out.println(Constant.START_MESSAGE);
 			plNum = util.inputNum();
 			plNum = util.numJudge(plNum);
-			comNum = util.random();
-			System.out.println(
-					Constant.JANKEN_STRINGS[plNum] + Constant.JANKENVS_STRING + Constant.JANKEN_STRINGS[comNum]);
-			jjudge.judge(plNum, comNum);
+			System.out.print(Constant.JANKEN_STRINGS[plNum]);
+			System.out.print(Constant.JANKENVS_STRING);
+
+			for (int j = 0; j < comList.size(); j++) {
+				comList.get(j).setHand(util.random());
+				System.out.print(Constant.JANKEN_STRINGS[comList.get(j).getHand()]);
+				if (j < comList.size() - 1) {
+					System.out.print(Constant.JANKENVS_STRING);
+				}
+			}
+			jjudge.judge(pl, comList);
 		}
-		jjudge.judgeEnd();
+
 	}
 }
